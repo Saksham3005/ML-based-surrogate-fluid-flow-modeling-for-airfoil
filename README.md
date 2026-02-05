@@ -1,6 +1,6 @@
-# 🌊 ML-Based Surrogate Fluid Flow Modeling for Airfoils
+# 🌊 Data Driven Surrogate Fluid Flow Modeling for Airfoils
 
-A cutting-edge research framework that leverages deep learning to create fast, accurate surrogate models for 2D airfoil aerodynamic simulations. This project automates the complete pipeline: from NACA airfoil geometry generation through CFD simulation to neural network training for real-time flow prediction.
+A research framework that leverages deep learning to create fast, accurate surrogate models for 2D airfoil aerodynamic simulations. This project automates the complete pipeline: from NACA airfoil geometry generation through CFD simulation to neural network training for real-time flow prediction.
 
 ## 🎯 Project Overview
 
@@ -143,7 +143,7 @@ Inference & visualization script:
 
 **1. Clone repository:**
 ```bash
-git clone <repository_url>
+git clone https://github.com/Saksham3005/ML-based-surrogate-fluid-flow-modeling-for-airfoil
 cd ml-surrogate-airfoil
 ```
 
