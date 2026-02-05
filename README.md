@@ -16,6 +16,11 @@ This repository combines **computational fluid dynamics (CFD)** with **machine l
 - 🧠 Train attention-enhanced U-Net models to map airfoil geometry → flow fields
 - ⚡ Deploy trained models for real-time flow prediction
 
+
+## 🎨 Results
+
+![Prediction Example](results/airfoil_1.png)
+
 ---
 
 ## 📁 Repository Structure
