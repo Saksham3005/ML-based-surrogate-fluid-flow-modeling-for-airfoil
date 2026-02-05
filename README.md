@@ -405,7 +405,7 @@ except:
 This project contains research code. If you use this work, please cite:
 
 ```bibtex
-@software{ml_surrogate_airfoil_2024,
+@software{ml_surrogate_airfoil_2026,
   title={ML-Based Surrogate Fluid Flow Modeling for Airfoils},
   author={Saksham},
   year={2026},
