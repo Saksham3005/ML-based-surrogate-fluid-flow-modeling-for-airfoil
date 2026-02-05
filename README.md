@@ -17,7 +17,7 @@ This repository combines **computational fluid dynamics (CFD)** with **machine l
 - ⚡ Deploy trained models for real-time flow prediction
 
 
-## 🎨 Results
+## Results
 
 ![Prediction Example](results/airfoil_1.png)
 
