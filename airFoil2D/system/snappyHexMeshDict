@@ -1,0 +1,123 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+
+castellatedMesh true;
+snap            true;
+addLayers       true;
+
+// ---------------------------------------------------------------------
+// Geometry
+// ---------------------------------------------------------------------
+geometry
+{
+    airfoil.stl
+    {
+        type triSurfaceMesh;
+        name airfoil;
+    }
+}
+
+// ---------------------------------------------------------------------
+// Castellated mesh controls (OF9 STRICT)
+// ---------------------------------------------------------------------
+castellatedMeshControls
+{
+    maxLocalCells 1000000;
+    maxGlobalCells 2000000;
+    minRefinementCells 0;
+    maxLoadUnbalance 0.10;
+
+    nCellsBetweenLevels 3;
+    allowFreeStandingZoneFaces true;
+
+    features
+    (
+        {
+            file "airfoil.eMesh";
+            level 3;
+        }
+    );
+
+    refinementSurfaces
+    {
+        airfoil
+        {
+            level (3 3);
+        }
+    }
+
+    resolveFeatureAngle 30;
+    locationInMesh (2 0 0);
+}
+
+// ---------------------------------------------------------------------
+// Snap controls
+// ---------------------------------------------------------------------
+snapControls
+{
+    nSmoothPatch 3;
+    tolerance 2.0;
+    nSolveIter 30;
+    nRelaxIter 5;
+}
+
+// ---------------------------------------------------------------------
+// Layer controls (OF9 MANDATORY KEYS)
+// ---------------------------------------------------------------------
+addLayersControls
+{
+    relativeSizes true;
+
+    layers
+    {
+        airfoil
+        {
+            nSurfaceLayers 1;
+        }
+    }
+
+    expansionRatio 1.2;
+    finalLayerThickness 0.5;
+    minThickness 0.1;
+    nGrow 0;
+
+    featureAngle 60;
+
+    nRelaxIter 5;
+    nLayerIter 50;
+
+    nSmoothSurfaceNormals 1;
+    nSmoothNormals 3;
+    nSmoothThickness 10;
+
+    maxFaceThicknessRatio 0.5;
+    maxThicknessToMedialRatio 0.3;
+    minMedianAxisAngle 90;
+    nBufferCellsNoExtrude 0;
+}
+
+// ---------------------------------------------------------------------
+meshQualityControls
+{
+    maxNonOrtho 65;
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+    maxConcave 80;
+    minVol 1e-13;
+    minTetQuality 1e-30;
+    minArea -1;
+    minTwist 0.02;
+    minDeterminant 0.001;
+    minFaceWeight 0.02;
+    minVolRatio 0.01;
+    minTriangleTwist -1;
+    nSmoothScale 4;
+    errorReduction 0.75;
+}
+
+mergeTolerance 1e-6;
