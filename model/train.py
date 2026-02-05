@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader, random_split
 from tqdm import tqdm
 
 from dataset_utils import AirfoilCFDDataset
-from model_arch import AirfoilUNet
+from model_arch_attn import AirfoilUNet
 
 
 DATASET_DIR = "../dataset"
@@ -85,9 +85,6 @@ for epoch in range(1, EPOCHS + 1):
 
     train_loss /= len(train_loader)
 
-    # -------------------------
-    # VALIDATION
-    # -------------------------
     model.eval()
     val_loss = 0.0
 
