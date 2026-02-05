@@ -403,8 +403,8 @@ This project contains research code. If you use this work, please cite:
 @software{ml_surrogate_airfoil_2024,
   title={ML-Based Surrogate Fluid Flow Modeling for Airfoils},
   author={Saksham},
-  year={2024},
-  url={https://github.com/[your-repo]}
+  year={2026},
+  url={https://github.com/Saksham3005/ML-based-surrogate-fluid-flow-modeling-for-airfoil}
 }
 ```
 
@@ -414,7 +414,7 @@ This project contains research code. If you use this work, please cite:
 
 For questions or issues:
 - 📝 Open a GitHub issue
-- 📧 Contact: [Your email]
+- 📧 Contact: [saksham.j3005@gmail.com]
 
 ---
 
