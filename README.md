@@ -283,44 +283,6 @@ U_INF = 10.0         # Freestream velocity [m/s]
 ALPHA_DEG = 5.0      # Angle of attack [degrees]
 NU = 1.5e-5          # Kinematic viscosity [m²/s]
 ```
-
----
-
-## 🐛 Troubleshooting
-
-### **Import Error: `from model_arch import AirfoilUNet`**
-The model file is named `model_arch_attn.py`, but imports reference `model_arch`.
-
-**Solution:** Either rename the file or update imports in `train.py`/`test.py`:
-```python
-from model_arch_attn import AirfoilUNet  # Instead of: from model_arch import AirfoilUNet
-```
-
-### **OpenFOAM Commands Not Found**
-`data_gen_auto.py` requires OpenFOAM executables on PATH.
-
-**Solution:**
-```bash
-# Add to .bashrc or shell profile:
-source /opt/openfoam10/etc/bashrc  # Adjust path to your OpenFOAM installation
-```
-
-### **CUDA Out of Memory**
-GPU memory exhausted during training.
-
-**Solution:**
-- Reduce `BATCH_SIZE` in `train.py`
-- Reduce `base` parameter in `AirfoilUNet` initialization
-- Use CPU (slower but no memory limit): Training will automatically use CPU if CUDA unavailable
-
-### **Data Loading Errors**
-Missing or misformatted dataset files.
-
-**Solution:**
-- Verify dataset directory structure matches specification above
-- Check all `.npy` files exist: `u.npy`, `v.npy`, `p.npy`, `sdf.npy`
-- Verify array shapes: all must be (256, 256)
-
 ---
 
 ## 📈 Performance Metrics
