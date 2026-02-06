@@ -285,23 +285,6 @@ NU = 1.5e-5          # Kinematic viscosity [m²/s]
 ```
 ---
 
-## 📈 Performance Metrics
-
-**Model Performance Indicators:**
-- **Inference Speed:** ~1-2ms per sample (GPU)
-- **Speedup vs. CFD:** 1000-5000× faster than OpenFOAM
-- **Accuracy:** Highly dependent on training dataset size and diversity
-
-**Training Benchmark** (on single GPU):
-```
-Batch Size: 5
-Epochs: 100
-Device: NVIDIA A100 (example)
-Time: ~5-10 minutes per 100 epochs
-```
-
----
-
 ## 🧪 Quick Validation Script
 
 Test the installation without full dataset:
